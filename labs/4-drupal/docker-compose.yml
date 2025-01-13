@@ -8,11 +8,11 @@ services:
     restart: always
 
   postgres:
-    image: postgres:10
+    image: postgres:16
     environment:
       POSTGRES_PASSWORD: postgres
     volumes:
-        - db_data:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql@16/data:rw
     restart: always
 
 volumes:
